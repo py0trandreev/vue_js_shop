@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue shop</title>
+    <style>
+        .modal {
+            width: 800px;
+            min-height: 600px;
+            position: absolute;
+            top: 100px;
+            left: calc(50% - 400px);
+            border: 1px solid #ccc;
+            background-color: white;
+            border-radius: 7px;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>GeekShop</h1>
+    </header>
+
+    <main>
+        <!-- vue app -->
+        <div id="app">
+            <button @click="showCart">Корзина</button>
+            <p></p>
+
+            <!-- список продуктов на ветрине -->
+            <product-list>
+                <slot></slot>
+            </product-list>
+
+            <!-- корзина -->
+            <cart-content v-if="cartIsVisible">
+
+            </cart-content>
+        </div>
+
+
+    </main>
+
+    <footer>
+        <p>2021 &copy;</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
