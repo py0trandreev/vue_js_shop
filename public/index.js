@@ -135,7 +135,7 @@ Vue.component('cart-list', {
             <h3>{{ product.title }}</h3>
             <p >{{ '₽ ' }}{{ product.price }}</p>
             <button :id="product.id" @click="deleteItem" >Удалить</button>
-            <p>--------</p>
+            <p>----------</p>
         </div>
     </div>
     `,
